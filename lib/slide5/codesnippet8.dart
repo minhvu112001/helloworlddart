@@ -1,5 +1,5 @@
 import 'dart:collection';
-class base Items extends LinkedListEntry<Items> {
+base class Items extends LinkedListEntry<Items> {
   final int id;
   final String name;
   Items(this.id, this.name);
@@ -10,7 +10,15 @@ class base Items extends LinkedListEntry<Items> {
 }
 void main() {
   final linkedList = LinkedList<Items>();
-  linkedList.addAll(
-      [Items(1, 'jon'), Items(2, 'natalia'), Items(3, 'dina')]);
-  print(linkedList);
+
+  final item1 = Items(1,'jon');
+  final item2 = Items(2,'natalia');
+  final item3 = Items(3,'dina');
+
+  linkedList.add(item1);
+  linkedList.add(item2);
+  linkedList.add(item3);
+  for (var item in linkedList){
+    print(item);
+  }
 }
