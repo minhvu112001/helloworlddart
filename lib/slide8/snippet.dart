@@ -23,7 +23,7 @@ void main(){
 
     List<Contact> contacts = jsonContacts.map((jsonContact){
       return Contact(jsonContact['name'], jsonContact['age']);
-    }).toList as List<Contact>;
+    }).toList();
 
     for (var contact in contacts){
       print("Name: ${contact.name}");
